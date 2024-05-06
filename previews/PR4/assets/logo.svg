@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500pt" height="500pt" version="1.1" viewBox="0 0 500 500">
+  <defs>
+    <filter id="filter_hdrc" width="500" height="500" x="0" y="0" filterUnits="userSpaceOnUse" style="color-interpolation-filters:sRGB">
+      <feFlood flood-color="#389826" in="SourceGraphic"/>
+      <feComposite in2="SourceAlpha" operator="in" result="c_green"/>
+      <feFlood flood-color="#cb3c33" in="SourceGraphic"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+      <feOffset dx="-95" dy="165" result="c_red"/>
+      <feFlood flood-color="#9558b2" in="SourceGraphic"/>
+      <feComposite in2="SourceAlpha" operator="in"/>
+      <feOffset dx="95" dy="165" result="c_purple"/>
+      <feComposite in2="c_red" operator="lighter"/>
+      <feComposite in2="c_green" operator="lighter"/>
+    </filter>
+    <filter id="filter_hdrcb" width="3" height="3" x="-1" y="-1">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <circle cx="250" cy="170" r="140" style="filter:url(#filter_hdrc)"/>
+  <path d="m450 280-183 10 83 163-100-153-100 153 83-163-183-10 183-10-83-163 100 153 100-153-83 163z" style="mix-blend-mode:overlay;fill:#fff;stroke:none;opacity:.7"/>
+  <path d="M250 232c20 16 35 46 42 72-27 9-57 9-84 0 7-26 22-56 42-72z" style="mix-blend-mode:overlay;fill:#fff;stroke:#fff;stroke-width:30;stroke-linejoin:round;filter:url(#filter_hdrcb)"/>
+</svg>
